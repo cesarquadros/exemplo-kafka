@@ -1,0 +1,9 @@
+package com.example.demo.kafka;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+import com.example.model.Pessoa;
+
+public interface PessoaRepository extends MongoRepository<Pessoa, String>{
+
+}

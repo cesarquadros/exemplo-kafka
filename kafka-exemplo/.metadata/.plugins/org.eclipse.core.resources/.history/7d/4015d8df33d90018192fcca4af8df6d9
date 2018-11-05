@@ -1,0 +1,12 @@
+package com.example.demo.kafka;
+
+import org.springframework.kafka.core.KafkaTemplate;
+
+public class KafkaProduces {
+	
+	private KafkaTemplate<String, String> kafkaTemplate;
+	
+	public void enviar(String teste) {
+		this.kafkaTemplate.send("topico.teste", teste);
+	}
+}

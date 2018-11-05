@@ -1,0 +1,26 @@
+package com.example.demo.kafka;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import io.swagger.annotations.Api;
+
+@RestController
+@Api(value = "Agendamento", tags = "Agendamento")
+public class Controller {
+	
+	@Autowired
+	KafkaProduces k;
+	
+	@RequestMapping(value = "/{teste}", method = RequestMethod.GET)
+	public String testeKafka(@PathVariable(value = "msg") String msg ) {
+		
+		k.enviar("teste");
+		
+		return "ok";
+	}
+
+}

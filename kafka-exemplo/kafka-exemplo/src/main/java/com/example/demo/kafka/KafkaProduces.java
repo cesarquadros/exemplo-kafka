@@ -46,7 +46,5 @@ public class KafkaProduces {
 		
 		this.repository.save(pessoa);
 		
-		this.repository.findAll();
-		
 	}
 }

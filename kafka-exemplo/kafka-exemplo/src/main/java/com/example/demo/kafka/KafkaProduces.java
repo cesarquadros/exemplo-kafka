@@ -38,7 +38,7 @@ public class KafkaProduces {
 		this.kafkaTemplate.send("topico.teste", mapper.writeValueAsString(pessoa));
 	}
 	
-	@KafkaListener(topics = "topico.teste")
+//	@KafkaListener(topics = "topico.teste")
 	public void ouvirFila(@Payload String mensagem) throws JsonParseException, JsonMappingException, IOException {
 		LOG.info(mensagem);
 		

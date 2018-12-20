@@ -11,6 +11,7 @@ public class TokenRedis {
 	
 	private UUID token;
 	private Perfil perfil;
+	
 	public UUID getToken() {
 		return token;
 	}
